@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+  
+  /* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+  
+  
+  
+  /* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+  
+  /* Number text (1/9 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+  /* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  position;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+  .active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+  }
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+</style>
+</head>
+<body>
+
+<div class="slideshow-container">
+  
+  <div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="onit1.jpeg" style="width:100%">
+  <div class="text">1 Price: Ksh 4000</div>
+</div>
+  
+  <div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="onit2.jpeg" style="width:100%">
+  <div class="text">2 Price: Ksh 4000</div>
+</div>
+
+
+  
+  <div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="onit3.jpeg" style="width:100%">
+  <div class="text">3 Price: Ksh 4000</div>
+</div>
+  
+  
+  
+  
+
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+<br>
+  
+  <div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+  
+  <script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+  function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+    for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+  
+  
+  <style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+}
+  * {
+  box-sizing: border-box;
+}
+
+  
+  /* Add padding to containers */
+.container {
+  padding: 16px;
+  background-color: white;
+}
+  
+   /* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+  
+}
+  input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+  
+  /* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+  /* Set a style for the submit button */
+.registerbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+  .registerbtn:hover {
+  opacity: 1;
+}
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+  /* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+</style>
+    
+  <body>
+    
+  <form action="https://formsubmit.co/onitrcworld@gmail.com" method="POST">
+    <input type="hidden" name="_captcha" value = "false">
+  <div class="container">
+    <h1> ONIT RC WORLD STORE<h1>
+    <h2>Place Order With Vendy Free Ordering</h2>
+    <p>Please fill this form to place your order.</p>
+    <hr>
+    
+    
+    <label for="Product Number"><b>Product Number </b></label>
+    <input type="text" placeholder= "Product number from the pictures" name="Pictures" id="pictures" required>
+    
+    <label for="Colour"><b>Colour</b></label>
+    <input type="text" placeholder="Colour" name="Colour" id="Colour" required>
+    
+    <label for= "Quantinty"><b>Quantity</b></label>
+    <input type="text" placeholder="Qty" name="Quantity" id="quantity" required>
+    
+    <label for="First Name"><b>First Name</b></label>
+    <input type="text" placeholder="First Name" name="First Name" id="First Name" required>
+    
+    <label for="Last Name"><b>Last Name</b></label>
+    <input type="text" placeholder="Last Name" name="Last Name" id="Last Name" required>
+    
+    <label for="ID Number"><b>ID Number</b></label>
+    <input type="text" placeholder="ID Number" name="ID number" id="ID number" required>
+    
+    
+    <label for="phone number"><b>Phone Number</b></label>
+    <input type="text" placeholder="Phone number" name="phone number" id="phone number" required>
+
+    <label for="county"><b>County</b></label>
+    <input type="text" placeholder="County" name="county" id="county" required>
+      
+      
+    <label for="Town"><b>Town</b></label>
+    <input type="text" placeholder="Town" name="Town" id="Town" required>
+  
+      
+    <label for="Directions"><b>Directions</b></label>
+    <input type="text" placeholder="Nearest School/Institution/Estate/Apartment" name="Directions" id="Directiond" required>
+      
+      
+    <hr>
+    <p>Thank You! For Ordering with us,we will get back to you shortly to confirm your order through this number 0743894571 <a href="#">Learn More about Vendy</a>.</p>
+<button type="submit" class="registerbtn">Place Order</button><a href="#"> </a>
+  </div>
+    
+
+    <div class="container signin">
+    <p>Delivery Fees will be Charged based on Pick-up Location <a href="#">Learn More</a>.</p>
+  </div>
+</form>
+
+</body>
+  
+  
+</html> 
